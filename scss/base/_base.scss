@@ -1,0 +1,48 @@
+/* ***************************** Base CSS ***************************** */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Gordita, sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a,
+input,
+select,
+textarea,
+button,
+img,
+label {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+label {
+    user-select: none;
+}
+
+ul,
+li {
+    list-style: none;
+}

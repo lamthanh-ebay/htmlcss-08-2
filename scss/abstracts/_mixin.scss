@@ -1,0 +1,30 @@
+/* ****************** Mixin Sass ****************** */
+@use "sass:map";
+/********** Mixin **********/
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+// Mixin tạo Media Query để làm Responsive cho các thành phần:
+@mixin screen($key) {
+    // $key là các infix nhé.
+    $breakpoint: map.get($grid-breakpoints, $key);
+
+    // Bước kiểm tra $key:
+    @if ($breakpoint != null) {
+        // Truyền $key link tinh thì $breakpoint sẽ trả ra null
+        // nên nếu $breakpoint khác null => tức là truyền đúng Infix
+        // thì mới chạy vào Media Query.
+        @media screen and (max-width: ($breakpoint - 0.02px)) {
+            @content;
+        }
+    } @else {
+        // Nếu $key khác Infix thì văng ra lỗi này nhé.
+        @error "The value #{$key} is not in Grid Breakpoint (List)";
+    }
+}
