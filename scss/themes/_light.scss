@@ -1,3 +1,20 @@
 html {
-    --text-color: red;
+    // Text color
+    --text-color-primary: #1a162e;
+    --text-color-second: #000;
+    --text-color-third: #9e9da8;
+
+    // icon color
+    --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%)
+        contrast(100%);
+
+    // Header
+    --header-bg-color: #eee;
+
+    // Top act
+    --top-act-wrap-bg-color: #fff;
+    --top-act-wrap-shadow-color: rgba(237, 237, 246, 0.2);
+    --top-act-btn-border-color: #ededf6;
+    --top-act-user-bg-color: #dfd2fa;
+    --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
 }

@@ -166,9 +166,12 @@ img,
 label {
   outline: none;
   border: none;
+  padding: 0;
+  margin: 0;
   font-family: inherit;
   font-size: inherit;
   -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
 }
 
 button,
@@ -179,6 +182,10 @@ label {
 ul,
 li {
   list-style: none;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 /* ******************* Grid System ******************* */
@@ -1458,11 +1465,175 @@ li {
 /* ****************** Mixin Sass ****************** */
 /********** Mixin **********/
 html {
-  --text-color: red;
+  --text-color-primary: #1a162e;
+  --text-color-second: #000;
+  --text-color-third: #9e9da8;
+  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%)
+      contrast(100%);
+  --header-bg-color: #eee;
+  --top-act-wrap-bg-color: #fff;
+  --top-act-wrap-shadow-color: rgba(237, 237, 246, 0.2);
+  --top-act-btn-border-color: #ededf6;
+  --top-act-user-bg-color: #dfd2fa;
+  --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
 }
 
 html.dark {
-  --text-color: blue;
+  --text-color-primary: #fff;
+  --text-color-second: #fff;
+  --text-color-third: #9e9da8;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7384%) hue-rotate(38deg) brightness(101%)
+      contrast(88%);
+  --header-bg-color: #171c28;
+  --top-act-wrap-bg-color: #292e39;
+  --top-act-wrap-shadow-color: rgba(0, 0, 0, 0.2);
+  --top-act-btn-border-color: #ededf6;
+  --top-act-user-bg-color: #dfd2fa;
+  --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 50px;
+}
+.logo__image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.logo__text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
+  color: var(--text-color-primary);
+}
+
+.navbar-menu {
+  margin-left: 144px;
+  margin-right: auto;
+}
+@media screen and (max-width: 1199.98px) {
+  .navbar-menu {
+    margin-left: 60px;
+  }
+}
+.navbar-menu__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar-menu__item-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: var(--text-color-primary);
+}
+.navbar-menu__item-icon {
+  padding-top: 2px;
+}
+
+.header {
+  background-color: var(--header-bg-color);
+}
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+@media screen and (max-width: 767.98px) {
+  .header__logo {
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  .header__logo-image {
+    width: 24px;
+    height: 24px;
+  }
+  .header__logo-text {
+    font-size: 1.8rem;
+  }
+}
+
+.menu-bar__icon {
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  width: 42px;
+  height: 50px;
+  padding: 0 12px;
+}
+@media screen and (max-width: 767.98px) {
+  .menu-bar__icon {
+    margin-right: 0;
+    padding: 0 12px;
+  }
+}
+.menu-bar__icon-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.top-act {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.top-act__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 13px 0;
+  border-radius: 8px;
+  background: var(--top-act-wrap-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--top-act-wrap-shadow-color);
+}
+.top-act__wrap--double {
+  padding: 10px 0;
+}
+.top-act__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 0 14.5px;
+  cursor: pointer;
+}
+.top-act__wrap--double .top-act__btn {
+  padding: 0 20px;
+}
+.top-act__btn + .top-act__btn {
+  border-left: 1px solid var(--top-act-btn-border-color);
+}
+.top-act__btn-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: var(--text-color-primary);
+}
+.top-act__user {
+  height: 50px;
+}
+.top-act__user-avatar {
+  width: 50px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--top-act-user-bg-color);
+  box-shadow: 0px 4px 14px 2px var(--top-act-user-shadow-color);
+  cursor: pointer;
 }
 
 .home__heading {

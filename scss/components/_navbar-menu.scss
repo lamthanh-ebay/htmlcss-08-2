@@ -1,0 +1,36 @@
+@use "../abstracts";
+
+.navbar-menu {
+    margin-left: 144px;
+    margin-right: auto;
+
+    @include abstracts.screen(xl) {
+        margin-left: 60px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__item {
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            height: 50px;
+
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            color: var(--text-color-primary);
+        }
+
+        &-icon {
+            padding-top: 2px;
+        }
+    }
+}

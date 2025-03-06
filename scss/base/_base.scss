@@ -32,9 +32,12 @@ img,
 label {
     outline: none;
     border: none;
+    padding: 0;
+    margin: 0;
     font-family: inherit;
     font-size: inherit;
     -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
 }
 
 button,
@@ -45,4 +48,8 @@ label {
 ul,
 li {
     list-style: none;
+}
+
+.icon {
+    filter: var(--icon-color);
 }

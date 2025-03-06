@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 50px;
+
+    &__image {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+        color: var(--text-color-primary);
+    }
+}
