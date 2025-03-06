@@ -11,16 +11,21 @@
     &__list {
         display: flex;
         align-items: center;
-        gap: 30px;
+        margin: 0 -15px;
     }
 
     &__item {
+        &:hover .dropdown {
+            display: block;
+        }
+
         &-link {
             display: flex;
             align-items: center;
             gap: 6px;
 
             height: 50px;
+            padding: 0 15px;
 
             font-size: 1.5rem;
             font-weight: 500;

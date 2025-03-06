@@ -16,6 +16,7 @@ body {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -52,4 +53,9 @@ li {
 
 .icon {
     filter: var(--icon-color);
+}
+
+body {
+    color: var(--text-color-primary);
+    background-color: var(--body-bg-color);
 }

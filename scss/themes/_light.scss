@@ -1,4 +1,7 @@
 html {
+    // Body color
+    --body-bg-color: #f6f6f6;
+
     // Text color
     --text-color-primary: #1a162e;
     --text-color-second: #000;
@@ -17,4 +20,8 @@ html {
     --top-act-btn-border-color: #ededf6;
     --top-act-user-bg-color: #dfd2fa;
     --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
+
+    // Dropdown Menu
+    --dropdown-inner-bg-color: #fff;
+    --dropdown-inner-shadow-color: rgba(200, 200, 200, 0.4);
 }
