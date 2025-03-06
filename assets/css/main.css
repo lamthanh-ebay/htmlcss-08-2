@@ -1457,5 +1457,16 @@ li {
 }
 /* ****************** Mixin Sass ****************** */
 /********** Mixin **********/
+html {
+  --text-color: red;
+}
+
+html.dark {
+  --text-color: blue;
+}
+
+.home__heading {
+  color: var(--text-color);
+}
 
 /*# sourceMappingURL=main.css.map */
