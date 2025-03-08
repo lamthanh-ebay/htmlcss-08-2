@@ -39,3 +39,90 @@
         }
     }
 }
+
+.navbar-dropdown__top {
+}
+
+.navbar-dropdown-menu {
+    &__main {
+        width: 293px;
+        padding-right: 30px;
+        border-right: 1px solid #d2d1d6;
+    }
+
+    &__column {
+        display: flex;
+        gap: 14px;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        position: relative;
+        width: 36px;
+        height: 36px;
+
+        &-img {
+            position: absolute;
+
+            &:first-child {
+                top: 0;
+                left: 0;
+
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+            }
+
+            &:last-child {
+                right: 0;
+                bottom: 0;
+
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+        margin-right: -30px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        height: 36px;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        margin-top: 12px;
+        width: 100%;
+
+        height: min(474px, 100vh - 188px - var(--padding) * 2);
+        overflow-y: auto;
+    }
+
+    &__item {
+        &:last-child .navbar-dropdown-menu__link {
+            margin-bottom: -7px;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+
+        &:hover {
+            // text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
+            font-weight: 500;
+            color: #0071dc;
+        }
+    }
+}
