@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html {
     // Body color
     --body-bg-color: #f6f6f6;
@@ -24,4 +26,11 @@ html {
     // Dropdown Menu
     --dropdown-inner-bg-color: #fff;
     --dropdown-inner-shadow-color: rgba(200, 200, 200, 0.4);
+
+    /******************** RESPONSIVE ********************/
+
+    // Header
+    @include abstracts.screen(md) {
+        --header-bg-color: #fff;
+    }
 }

@@ -1485,6 +1485,12 @@ html {
   --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
   --dropdown-inner-bg-color: #fff;
   --dropdown-inner-shadow-color: rgba(200, 200, 200, 0.4);
+  /******************** RESPONSIVE ********************/
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 html.dark {
@@ -1616,6 +1622,7 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .menu-bar__icon {
     margin-right: 0;
+    margin-left: -12px;
     padding: 0 12px;
   }
 }

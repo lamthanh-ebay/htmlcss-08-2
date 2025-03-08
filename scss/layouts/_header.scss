@@ -43,6 +43,7 @@
 
     @include abstracts.screen(md) {
         margin-right: 0;
+        margin-left: -12px;
         padding: 0 12px;
     }
 
