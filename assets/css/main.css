@@ -1578,7 +1578,7 @@ html.dark {
   gap: 14px;
 }
 .navbar-dropdown-menu__column + .navbar-dropdown-menu__column {
-  margin-top: 26px;
+  margin-top: 24px;
 }
 .navbar-dropdown-menu__icon {
   flex-shrink: 0;
@@ -1654,6 +1654,15 @@ html.dark {
 .navbar-dropdown-menu__sub-list {
   height: auto;
   overflow: unset;
+}
+.navbar-dropdown-menu__sub--not-main {
+  position: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--padding);
+  padding-left: 0;
+  height: min(522px, 100vh - 140px - var(--padding) * 2);
+  overflow-y: auto;
 }
 
 .dropdown {
