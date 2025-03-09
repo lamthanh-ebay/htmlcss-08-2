@@ -3,6 +3,7 @@
     align-items: center;
     gap: 14px;
     height: 50px;
+    user-select: none;
 
     &__image {
         width: 32px;

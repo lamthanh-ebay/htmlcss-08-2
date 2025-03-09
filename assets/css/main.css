@@ -1517,6 +1517,7 @@ html.dark {
   align-items: center;
   gap: 14px;
   height: 50px;
+  user-select: none;
 }
 .logo__image {
   width: 32px;
@@ -1557,9 +1558,14 @@ html.dark {
   font-weight: 500;
   line-height: 146.667%;
   color: var(--text-color-primary);
+  user-select: none;
 }
 .navbar-menu__item-icon {
   padding-top: 2px;
+}
+
+.navbar-dropdown__top {
+  position: relative;
 }
 
 .navbar-dropdown-menu__main {
@@ -1571,11 +1577,15 @@ html.dark {
   display: flex;
   gap: 14px;
 }
+.navbar-dropdown-menu__column + .navbar-dropdown-menu__column {
+  margin-top: 26px;
+}
 .navbar-dropdown-menu__icon {
   flex-shrink: 0;
   position: relative;
   width: 36px;
   height: 36px;
+  user-select: none;
 }
 .navbar-dropdown-menu__icon-img {
   position: absolute;
@@ -1604,6 +1614,7 @@ html.dark {
   height: 36px;
   font-size: 1.6rem;
   font-weight: 500;
+  user-select: none;
 }
 .navbar-dropdown-menu__list {
   margin-top: 12px;
@@ -1614,6 +1625,13 @@ html.dark {
 .navbar-dropdown-menu__item:last-child .navbar-dropdown-menu__link {
   margin-bottom: -7px;
 }
+.navbar-dropdown-menu__item--active > .navbar-dropdown-menu__link, .navbar-dropdown-menu__item:hover > .navbar-dropdown-menu__link {
+  text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
+  color: #0071dc;
+}
+.navbar-dropdown-menu__item--active .navbar-dropdown-menu__sub {
+  display: grid;
+}
 .navbar-dropdown-menu__link {
   display: block;
   padding: 7px 0;
@@ -1621,9 +1639,21 @@ html.dark {
   font-weight: 400;
   line-height: 142.857%;
 }
-.navbar-dropdown-menu__link:hover {
-  font-weight: 500;
-  color: #0071dc;
+.navbar-dropdown-menu__sub {
+  position: absolute;
+  inset: 0 0 0 293px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--padding);
+  padding-left: var(--padding);
+  overflow-y: auto;
+}
+.navbar-dropdown-menu__sub .navbar-dropdown-menu__content {
+  margin-right: 0;
+}
+.navbar-dropdown-menu__sub-list {
+  height: auto;
+  overflow: unset;
 }
 
 .dropdown {
@@ -1632,6 +1662,7 @@ html.dark {
   width: 1240px;
   max-width: 100%;
   padding-top: 38px;
+  display: none;
 }
 .dropdown__inner {
   --padding: 30px;
@@ -1748,6 +1779,7 @@ html.dark {
   background: var(--top-act-user-bg-color);
   box-shadow: 0px 4px 14px 2px var(--top-act-user-shadow-color);
   cursor: pointer;
+  user-select: none;
 }
 
 .home__heading {

@@ -32,6 +32,7 @@
             line-height: 146.667%;
 
             color: var(--text-color-primary);
+            user-select: none;
         }
 
         &-icon {
@@ -41,9 +42,11 @@
 }
 
 .navbar-dropdown__top {
+    position: relative;
 }
 
 .navbar-dropdown-menu {
+    // Dropdown menu main
     &__main {
         width: 293px;
         padding-right: 30px;
@@ -53,6 +56,10 @@
     &__column {
         display: flex;
         gap: 14px;
+
+        & + & {
+            margin-top: 26px;
+        }
     }
 
     &__icon {
@@ -60,6 +67,7 @@
         position: relative;
         width: 36px;
         height: 36px;
+        user-select: none;
 
         &-img {
             position: absolute;
@@ -96,6 +104,7 @@
         height: 36px;
         font-size: 1.6rem;
         font-weight: 500;
+        user-select: none;
     }
 
     &__list {
@@ -110,6 +119,17 @@
         &:last-child .navbar-dropdown-menu__link {
             margin-bottom: -7px;
         }
+
+        &--active > .navbar-dropdown-menu__link,
+        &:hover > .navbar-dropdown-menu__link {
+            text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
+            // font-weight: 500;
+            color: #0071dc;
+        }
+
+        &--active .navbar-dropdown-menu__sub {
+            display: grid;
+        }
     }
 
     &__link {
@@ -118,11 +138,32 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
+    }
 
-        &:hover {
-            // text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
-            font-weight: 500;
-            color: #0071dc;
+    // Dropdown menu sub
+    &__sub {
+        position: absolute;
+        inset: 0 0 0 293px;
+
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--padding);
+
+        padding-left: var(--padding);
+        // background-color: orange;
+
+        overflow-y: auto;
+
+        &-column {
+        }
+
+        .navbar-dropdown-menu__content {
+            margin-right: 0;
+        }
+
+        &-list {
+            height: auto;
+            overflow: unset;
         }
     }
 }

@@ -114,6 +114,7 @@
             background: var(--top-act-user-bg-color);
             box-shadow: 0px 4px 14px 2px var(--top-act-user-shadow-color);
             cursor: pointer;
+            user-select: none;
         }
     }
 }
