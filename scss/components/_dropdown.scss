@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .dropdown {
     position: absolute;
     left: 0;
@@ -7,12 +9,16 @@
     padding-top: 38px;
     display: none;
 
+    @include abstracts.screen(lg) {
+        position: initial;
+        padding-top: 0;
+        width: 100%;
+    }
+
     &__inner {
         --padding: 30px;
 
         position: relative;
-
-        background-color: orange;
 
         padding: var(--padding);
         border-radius: 20px;
@@ -26,6 +32,20 @@
             left: var(--arrow-left-pos);
             transform: translateX(-50%);
             filter: var(--dropdown-arrow-bg-color);
+        }
+
+        @include abstracts.screen(lg) {
+            position: initial;
+            border-radius: 0;
+
+            padding: 0 30px;
+
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
         }
     }
 }

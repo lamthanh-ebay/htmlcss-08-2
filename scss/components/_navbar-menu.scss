@@ -8,15 +8,106 @@
         margin-left: 60px;
     }
 
+    @include abstracts.screen(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 9;
+
+        margin-left: 0;
+        border-radius: 0px 20px 20px 0px;
+        background-color: #fff;
+
+        translate: -110%;
+        transition: translate 0.35s;
+
+        &.show {
+            translate: 0;
+            box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+        }
+
+        &.show ~ &__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @include abstracts.screen(md) {
+        inset: 0 20% 0 0;
+        padding-top: 20px;
+    }
+
+    &__back {
+        padding: 10px 30px;
+    }
+
+    &__overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 8;
+
+        background-color: rgba($color: #000000, $alpha: 0.4);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity, visibility;
+        transition-duration: 0.35s;
+    }
+
+    &__act {
+        align-items: center;
+
+        height: 50px;
+        padding: 0 30px;
+
+        &-title,
+        &-value {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &-title {
+            margin: 0 auto 0 18px;
+        }
+    }
+
     &__list {
         display: flex;
         align-items: center;
         margin: 0 -15px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            margin: 0;
+
+            // background-color: orange;
+            height: max(350px, 100vh - 60px);
+            overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        @include abstracts.screen(md) {
+            height: max(350px, 100vh - 250px);
+        }
     }
 
     &__item {
         &:hover .dropdown {
             display: block;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+
+            &:hover .dropdown {
+                display: none;
+            }
+
+            &--active .dropdown {
+                display: block !important;
+            }
         }
 
         &-link {
@@ -33,10 +124,26 @@
 
             color: var(--text-color-primary);
             user-select: none;
+
+            @include abstracts.screen(lg) {
+                justify-content: space-between;
+
+                width: 100%;
+                padding: 0 30px;
+            }
         }
 
         &-icon {
             padding-top: 2px;
+
+            @include abstracts.screen(lg) {
+                rotate: -90deg;
+                transition: rotate 0.25s;
+
+                .navbar-menu__item--active & {
+                    rotate: 0deg;
+                }
+            }
         }
     }
 }
@@ -51,6 +158,11 @@
         width: 293px;
         padding-right: 30px;
         border-right: 1px solid #d2d1d6;
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+            border-right: none;
+        }
     }
 
     &__column {
@@ -68,6 +180,16 @@
         width: 36px;
         height: 36px;
         user-select: none;
+
+        @include abstracts.screen(xl) {
+            display: none;
+        }
+
+        @include abstracts.screen(lg) {
+            .navbar-dropdown-menu__sub & {
+                display: block;
+            }
+        }
 
         &-img {
             position: absolute;
@@ -95,6 +217,10 @@
     &__content {
         flex: 1;
         margin-right: -30px;
+
+        @include abstracts.screen(lg) {
+            margin-right: 0;
+        }
     }
 
     &__title {
@@ -105,6 +231,14 @@
         font-size: 1.6rem;
         font-weight: 500;
         user-select: none;
+
+        @include abstracts.screen(lg) {
+            display: none;
+
+            .navbar-dropdown-menu__sub & {
+                display: flex;
+            }
+        }
     }
 
     &__list {
@@ -113,6 +247,12 @@
 
         height: min(474px, 100vh - 188px - var(--padding) * 2);
         overflow-y: auto;
+
+        @include abstracts.screen(lg) {
+            margin-top: 0;
+            height: auto;
+            overflow-y: unset;
+        }
     }
 
     &__item {
@@ -154,6 +294,16 @@
 
         overflow-y: auto;
 
+        @include abstracts.screen(lg) {
+            position: initial;
+            inset: unset;
+
+            grid-template-columns: 1fr;
+
+            padding-left: 0;
+            overflow-y: unset;
+        }
+
         &-column {
         }
 
@@ -164,6 +314,10 @@
         &-list {
             height: auto;
             overflow: unset;
+
+            @include abstracts.screen(lg) {
+                margin-top: 13px;
+            }
         }
 
         // Dropdown menu sub main
@@ -176,6 +330,12 @@
 
             height: min(522px, 100vh - 140px - var(--padding) * 2);
             overflow-y: auto;
+
+            @include abstracts.screen(lg) {
+                grid-template-columns: 1fr;
+                height: auto;
+                overflow-y: unset;
+            }
         }
     }
 }

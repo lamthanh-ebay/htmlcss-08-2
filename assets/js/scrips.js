@@ -136,13 +136,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -152,5 +158,58 @@ function handleActiveMenu() {
 
     dropdowns.forEach((dropdown) => {
         dropdown.onmouseleave = () => init();
+    });
+}
+
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar-menu__item--active");
+        };
+    });
+});
+
+/**
+ * JS toggle
+ *
+ * Cách dùng:
+ * 1 - <button class="js-toggle" toggle-target="#box">Click</button>
+ * 2 - <div id="box">Content show/hide</div>
+ */
+window.addEventListener("template-loaded", initJsToggle);
+
+function initJsToggle() {
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = (e) => {
+            e.preventDefault();
+            // Thêm e và 1 dòng code ở trên để loại bỏ hành động mặc định.
+            // Xem thêm Video => Làm form filter sản phẩm #5 - Project 8
+
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
+
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
+        };
     });
 }

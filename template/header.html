@@ -2,7 +2,7 @@
     <div class="header-inner">
         <!-- Menu bar icon -->
         <button class="menu-bar__icon d-none d-lg-flex">
-            <img src="./assets/icons/menu-bar.svg" alt="" class="menu-bar__icon-img icon" />
+            <img src="./assets/icons/menu-bar.svg" alt="" class="menu-bar__icon-img icon js-toggle" toggle-target="#navbar-menu" />
         </button>
 
         <!-- Logo -->
@@ -10,9 +10,26 @@
             <img src="./assets/img/logo.svg" alt="Grocery Mart" class="logo__image header__logo-image" />
             <p class="logo__text header__logo-text">grocerymart</p>
         </a>
-
         <!-- Nav bar Menu-->
-        <nav class="navbar-menu d-lg-none">
+        <nav id="navbar-menu" class="navbar-menu hide">
+            <!-- Arrow back left -->
+            <img src="./assets/icons/arrow-back-left.svg" alt="" class="navbar-menu__back d-none d-lg-block js-toggle" toggle-target="#navbar-menu" />
+
+            <!-- Navbar menu act 1 -->
+            <a href="#!" class="navbar-menu__act d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="navbar-menu__act-icon icon" />
+                <span class="navbar-menu__act-title">Card</span>
+                <span class="navbar-menu__act-value">3</span>
+            </a>
+
+            <!-- Navbar menu act 2 -->
+            <a href="#!" class="navbar-menu__act d-none d-md-flex">
+                <img src="./assets/icons/heart.svg" alt="" class="navbar-menu__act-icon icon" />
+                <span class="navbar-menu__act-title">Favorite</span>
+                <span class="navbar-menu__act-value">3</span>
+            </a>
+
+            <!-- Navbar Menu List -->
             <ul class="navbar-menu__list js-dropdown-list">
                 <li class="navbar-menu__item">
                     <a href="#!" class="navbar-menu__item-link">
@@ -3451,6 +3468,9 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Navbar Overlay -->
+        <div class="navbar-menu__overlay d-none d-lg-block js-toggle" toggle-target="#navbar-menu"></div>
 
         <!-- Top act -->
         <div class="top-act">
