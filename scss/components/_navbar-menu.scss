@@ -14,15 +14,16 @@
         z-index: 9;
 
         margin-left: 0;
+        padding-top: 20px;
         border-radius: 0px 20px 20px 0px;
-        background-color: #fff;
+        background-color: var(--navbar-menu-bg-color);
 
         translate: -110%;
         transition: translate 0.35s;
 
         &.show {
             translate: 0;
-            box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+            box-shadow: 0px 40px 90px 20px var(--navbar-menu-shadow-color);
         }
 
         &.show ~ &__overlay {
@@ -33,11 +34,15 @@
 
     @include abstracts.screen(md) {
         inset: 0 20% 0 0;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     &__back {
         padding: 10px 30px;
+
+        @include abstracts.screen(md) {
+            padding: 10px 20px;
+        }
     }
 
     &__overlay {
@@ -58,6 +63,11 @@
 
         height: 50px;
         padding: 0 30px;
+
+        @include abstracts.screen(md) {
+            height: 42px;
+            padding: 0 20px;
+        }
 
         &-title,
         &-value {
@@ -130,6 +140,14 @@
 
                 width: 100%;
                 padding: 0 30px;
+            }
+
+            @include abstracts.screen(md) {
+                height: 44px;
+                padding: 0 20px;
+
+                font-size: 1.6rem;
+                line-height: 150%;
             }
         }
 
@@ -265,6 +283,10 @@
             text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
             // font-weight: 500;
             color: #0071dc;
+
+            @include abstracts.screen(md) {
+                text-shadow: 0.2px 0.2px #0071dc, -0.2px -0.2px #0071dc;
+            }
         }
 
         &--active .navbar-dropdown-menu__sub {
@@ -278,6 +300,9 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
+
+        @include abstracts.screen(md) {
+        }
     }
 
     // Dropdown menu sub

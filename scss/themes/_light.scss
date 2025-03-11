@@ -10,8 +10,7 @@ html {
     --text-color-third: #9e9da8;
 
     // icon color
-    --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%)
-        contrast(100%);
+    --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%) contrast(100%);
 
     // Header
     --header-bg-color: #eee;
@@ -26,6 +25,10 @@ html {
     // Dropdown Menu
     --dropdown-inner-bg-color: #fff;
     --dropdown-inner-shadow-color: rgba(200, 200, 200, 0.4);
+
+    // Navbar Menu
+    --navbar-menu-bg-color: #fff;
+    --navbar-menu-shadow-color: rgba(200, 200, 200, 0.4);
 
     /******************** RESPONSIVE ********************/
 

@@ -1475,8 +1475,7 @@ html {
   --text-color-primary: #1a162e;
   --text-color-second: #000;
   --text-color-third: #9e9da8;
-  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%)
-      contrast(100%);
+  --icon-color: brightness(0) saturate(100%) invert(10%) sepia(34%) saturate(911%) hue-rotate(210deg) brightness(91%) contrast(100%);
   --header-bg-color: #eee;
   --top-act-wrap-bg-color: #fff;
   --top-act-wrap-shadow-color: rgba(237, 237, 246, 0.2);
@@ -1485,6 +1484,8 @@ html {
   --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
   --dropdown-inner-bg-color: #fff;
   --dropdown-inner-shadow-color: rgba(200, 200, 200, 0.4);
+  --navbar-menu-bg-color: #fff;
+  --navbar-menu-shadow-color: rgba(200, 200, 200, 0.4);
   /******************** RESPONSIVE ********************/
 }
 @media screen and (max-width: 767.98px) {
@@ -1498,8 +1499,7 @@ html.dark {
   --text-color-primary: #fff;
   --text-color-second: #fff;
   --text-color-third: #9e9da8;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7384%) hue-rotate(38deg) brightness(101%)
-      contrast(88%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7384%) hue-rotate(38deg) brightness(101%) contrast(88%);
   --header-bg-color: #171c28;
   --top-act-wrap-bg-color: #292e39;
   --top-act-wrap-shadow-color: rgba(0, 0, 0, 0.2);
@@ -1508,8 +1508,9 @@ html.dark {
   --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
   --dropdown-inner-bg-color: #323743;
   --dropdown-inner-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-bg-color: brightness(0) saturate(100%) invert(18%) sepia(4%) saturate(2366%) hue-rotate(185deg)
-      brightness(100%) contrast(91%);
+  --dropdown-arrow-bg-color: brightness(0) saturate(100%) invert(18%) sepia(4%) saturate(2366%) hue-rotate(185deg) brightness(100%) contrast(91%);
+  --navbar-menu-bg-color: #292e39;
+  --navbar-menu-shadow-color: rgba(23, 28, 40, 0.4);
 }
 
 .logo {
@@ -1546,14 +1547,15 @@ html.dark {
     inset: 0 50% 0 0;
     z-index: 9;
     margin-left: 0;
+    padding-top: 20px;
     border-radius: 0px 20px 20px 0px;
-    background-color: #fff;
+    background-color: var(--navbar-menu-bg-color);
     translate: -110%;
     transition: translate 0.35s;
   }
   .navbar-menu.show {
     translate: 0;
-    box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+    box-shadow: 0px 40px 90px 20px var(--navbar-menu-shadow-color);
   }
   .navbar-menu.show ~ .navbar-menu__overlay {
     opacity: 1;
@@ -1563,11 +1565,16 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .navbar-menu {
     inset: 0 20% 0 0;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 }
 .navbar-menu__back {
   padding: 10px 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .navbar-menu__back {
+    padding: 10px 20px;
+  }
 }
 .navbar-menu__overlay {
   position: fixed;
@@ -1583,6 +1590,12 @@ html.dark {
   align-items: center;
   height: 50px;
   padding: 0 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .navbar-menu__act {
+    height: 42px;
+    padding: 0 20px;
+  }
 }
 .navbar-menu__act-title, .navbar-menu__act-value {
   font-size: 1.5rem;
@@ -1643,6 +1656,14 @@ html.dark {
     justify-content: space-between;
     width: 100%;
     padding: 0 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .navbar-menu__item-link {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 1.6rem;
+    line-height: 150%;
   }
 }
 .navbar-menu__item-icon {
@@ -1758,6 +1779,11 @@ html.dark {
 .navbar-dropdown-menu__item--active > .navbar-dropdown-menu__link, .navbar-dropdown-menu__item:hover > .navbar-dropdown-menu__link {
   text-shadow: 0.3px 0.3px #0071dc, -0.3px -0.3px #0071dc;
   color: #0071dc;
+}
+@media screen and (max-width: 767.98px) {
+  .navbar-dropdown-menu__item--active > .navbar-dropdown-menu__link, .navbar-dropdown-menu__item:hover > .navbar-dropdown-menu__link {
+    text-shadow: 0.2px 0.2px #0071dc, -0.2px -0.2px #0071dc;
+  }
 }
 .navbar-dropdown-menu__item--active .navbar-dropdown-menu__sub {
   display: grid;
