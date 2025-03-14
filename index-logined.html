@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Mart</title>
+
+        <!-- Font -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Grocery Mart" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scrips -->
+        <script src="./assets/js/scrips.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header-logined.html");
+        </script>
+
+        <!-- Main -->
+        <main class="home">
+            <h1 class="home__heading">Home</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia veniam unde ab excepturi voluptatem molestiae, molestias saepe dolore sequi, nam a vero debitis minus
+                magni, itaque delectus! Ratione, incidunt veritatis.
+            </p>
+
+            <a href="./sign-in.html">Sign in</a>
+            <a href="./sign-up.html">Sign up</a>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
+    </body>
+</html>
