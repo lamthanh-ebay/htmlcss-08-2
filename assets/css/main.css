@@ -1892,7 +1892,13 @@ html.dark {
 .slideshow__inner {
   display: flex;
   align-items: center;
+  border-radius: 20px;
   overflow: hidden;
+}
+@media screen and (max-width: 767.98px) {
+  .slideshow__inner {
+    border-radius: 10px;
+  }
 }
 .slideshow__item {
   flex-shrink: 0;

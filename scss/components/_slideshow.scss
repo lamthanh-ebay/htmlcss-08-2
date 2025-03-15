@@ -6,8 +6,12 @@
     &__inner {
         display: flex;
         align-items: center;
-
+        border-radius: 20px;
         overflow: hidden;
+
+        @include abstracts.screen(md) {
+            border-radius: 10px;
+        }
     }
 
     &__item {
