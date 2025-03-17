@@ -1566,7 +1566,7 @@ html.dark {
   --footer-form-btn-color: #fff;
   --footer-info-label-color: #64748b;
   --footer-info-value-hover-color: #f94545;
-  --footer-bottom-border-color: #e4e4e7;
+  --footer-bottom-border-color: #64748b;
   --social-item-hover-bg-color: #77dae6;
   --social-item-icon-hover-bg-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2701%) hue-rotate(160deg) brightness(106%) contrast(92%);
   /******************** RESPONSIVE ********************/
@@ -2536,7 +2536,7 @@ html.dark {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  border-top: 1px solid --footer-bottom-border-color;
+  border-top: 1px solid var(--footer-bottom-border-color);
   margin-top: 111px;
   padding-top: 20px;
 }
