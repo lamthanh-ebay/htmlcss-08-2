@@ -44,6 +44,21 @@ html {
     --product-item-favorite-bg-color: #fff;
     --product-item-favorite-shadow-color: rgba(124, 124, 124, 0.2);
 
+    // Footer
+    --footer-bg-color: #fff;
+    --footer-form-group-bg-color: #fff;
+    --footer-form-group-border-color: #d4d4d8;
+    --footer-form-input-placeholder-color: #64748b;
+    --footer-form-btn-bg-color: #2563eb;
+    --footer-form-btn-color: #fff;
+    --footer-info-label-color: #64748b;
+    --footer-info-value-hover-color: #f94545;
+    --footer-bottom-border-color: #e4e4e7;
+
+    // Social
+    --social-item-hover-bg-color: #77dae6;
+    --social-item-icon-hover-bg-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2701%) hue-rotate(160deg) brightness(106%) contrast(92%);
+
     /******************** RESPONSIVE ********************/
 
     // Header
