@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
     // Body color
     --body-bg-color: #292e39;
@@ -32,4 +34,21 @@ html.dark {
     // Category : Home Page
     --category-item-bg-color: #171c28;
     --category-item-thumb-bg-color: #292e39;
+
+    // Filter btn
+    --filter-btn-bg-color: #171c28;
+    --filter-btn-label-color: #fff;
+
+    // Product item
+    --product-item-bg-color: #171c28;
+    --product-item-shadow-color: rgba(0, 0, 0, 0.2);
+    --product-item-favorite-bg-color: #292e39;
+    --product-item-favorite-shadow-color: rgba(124, 124, 124, 0.2);
+
+    /******************** RESPONSIVE ********************/
+
+    // Filter btn
+    @include abstracts.screen(md) {
+        --filter-btn-label-color: #fff;
+    }
 }

@@ -34,10 +34,25 @@ html {
     --category-item-bg-color: #eee;
     --category-item-thumb-bg-color: #fff;
 
+    // Filter btn
+    --filter-btn-bg-color: #fff;
+    --filter-btn-label-color: #6c6c72;
+
+    // Product item
+    --product-item-bg-color: #fff;
+    --product-item-shadow-color: rgba(237, 237, 246, 0.2);
+    --product-item-favorite-bg-color: #fff;
+    --product-item-favorite-shadow-color: rgba(124, 124, 124, 0.2);
+
     /******************** RESPONSIVE ********************/
 
     // Header
     @include abstracts.screen(md) {
         --header-bg-color: #fff;
+    }
+
+    // Filter btn
+    @include abstracts.screen(md) {
+        --filter-btn-label-color: #1a162e;
     }
 }

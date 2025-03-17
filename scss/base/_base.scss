@@ -41,6 +41,10 @@ label {
     background-color: transparent;
 }
 
+button {
+    cursor: pointer;
+}
+
 button,
 label {
     user-select: none;
@@ -58,4 +62,15 @@ li {
 body {
     color: var(--text-color-primary);
     background-color: var(--body-bg-color);
+}
+
+.ba-cham {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    --line-clamp: 3;
 }

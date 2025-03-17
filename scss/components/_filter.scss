@@ -1,0 +1,38 @@
+@use "../abstracts";
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    width: 101px;
+    height: 36px;
+    border-radius: 6px;
+    background: var(--filter-btn-bg-color);
+
+    @include abstracts.screen(md) {
+        width: 104px;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 142.857%;
+        color: var(--filter-btn-label-color);
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+    }
+}
