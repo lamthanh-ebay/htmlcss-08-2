@@ -112,6 +112,10 @@
 
             @include abstracts.screen(md) {
                 padding: 12px 0;
+
+                &:hover {
+                    text-shadow: 0.15px 0.15px #0071dc, -0.15px -0.15px #0071dc;
+                }
             }
         }
     }

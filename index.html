@@ -180,10 +180,103 @@
                 <section class="product-list home-section">
                     <div class="home-section__top">
                         <h2 class="section__heading home-section__heading">Total LavAzza 1320</h2>
-                        <button class="filter-btn">
-                            <span class="filter-btn__label">Filter</span>
-                            <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
-                        </button>
+                        <!-- Filter -->
+                        <div class="filter">
+                            <!-- Filter btn -->
+                            <button class="filter-btn js-toggle" toggle-target="#filter-dropdown">
+                                <span class="filter-btn__label">Filter</span>
+                                <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
+                            </button>
+
+                            <!-- Filter wrap -->
+                            <div class="filter__wrap hide" id="filter-dropdown">
+                                <div class="filter__inner">
+                                    <img src="./assets/icons/arrow-up.png" alt="" class="filter__inner-arrow-up" />
+                                    <!-- Filter form -->
+                                    <form action="" class="form filter-form" autocomplete="off">
+                                        <p class="form__title filter-form__title">Filter</p>
+
+                                        <!-- Filter form row -->
+                                        <div class="form__row filter-form__row">
+                                            <!-- Filter form column 1 -->
+                                            <div class="form__column filter-form__column">
+                                                <label for="" class="form__label">Price</label>
+                                                <div class="form__group filter-form__group">
+                                                    <div class="form__slider" style="--min: 10%; --max: 60%"></div>
+                                                </div>
+                                                <div class="form__row filter-form__row">
+                                                    <div class="form__group filter-form__group">
+                                                        <label for="" class="form__label form__label--small">Minimum</label>
+                                                        <div class="form__input-wrap form__input-wrap--small">
+                                                            <input type="text" value="$30.00" class="form__input" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form__group filter-form__group">
+                                                        <label for="" class="form__label form__label--small">Maximum</label>
+                                                        <div class="form__input-wrap form__input-wrap--small">
+                                                            <input type="text" value="$100.00" class="form__input" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Filter form column 2 -->
+                                            <div class="form__column filter-form__column">
+                                                <label for="" class="form__label">Size/Weight</label>
+                                                <div class="form__group filter-form__group">
+                                                    <div class="form__select-wrap">
+                                                        <div class="form__select form__select-size form__select-size--lager">
+                                                            <span>500g</span>
+                                                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="form__select-icon icon" />
+                                                        </div>
+                                                        <div class="form__select form__select-size">
+                                                            <span>Gram</span>
+                                                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="form__select-icon icon" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form__group filter-form__group">
+                                                    <div class="form__select-wrap form__select-wrap--small">
+                                                        <div class="form__select form__select-label">Small</div>
+                                                        <div class="form__select form__select-label">Medium</div>
+                                                        <div class="form__select form__select-label">Large</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Filter form column 3 -->
+                                            <div class="form__column filter-form__column">
+                                                <label for="" class="form__label">Brand</label>
+                                                <div class="form__group filter-form__group">
+                                                    <div class="form__search">
+                                                        <input type="text" class="form__search-input" placeholder="Search brand name" />
+                                                        <button class="form__search-btn js-toggle" toggle-target="#filter-dropdown">
+                                                            <img src="./assets/icons/search.svg" alt="" class="form__search-btn-icon icon" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form__group filter-form__group">
+                                                    <div class="form__select-wrap form__select-wrap--small">
+                                                        <div class="form__select form__select-label">Lavazza</div>
+                                                        <div class="form__select form__select-label">Nescafe</div>
+                                                        <div class="form__select form__select-label">Starbucks</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Filter form bottom -->
+                                        <div class="filter-form__bottom">
+                                            <button class="btn btn--text js-toggle" toggle-target="#filter-dropdown">Cancel</button>
+                                            <button class="btn btn--primary js-toggle" toggle-target="#filter-dropdown">Show Result</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Product List -->

@@ -1,38 +1,103 @@
 @use "../abstracts";
 
-.filter-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+.filter {
+    position: relative;
 
-    width: 101px;
-    height: 36px;
-    border-radius: 6px;
-    background: var(--filter-btn-bg-color);
+    &__wrap {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        padding-top: 20px;
 
-    @include abstracts.screen(md) {
-        width: 104px;
-    }
+        opacity: 0;
+        visibility: hidden;
 
-    &__label {
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 142.857%;
-        color: var(--filter-btn-label-color);
+        transition: opacity, visibility;
+        transition-duration: 0.25s;
 
-        @include abstracts.screen(md) {
-            font-size: 1.6rem;
-            font-weight: 500;
-            line-height: 150%;
+        &.show {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
-    &__icon {
-        flex-shrink: 0;
+    &__inner {
+        position: relative;
 
-        width: 24px;
-        height: 24px;
-        object-fit: cover;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0px 40px 90px rgba(200, 200, 200, 0.4);
+
+        &-arrow-up {
+            position: absolute;
+            top: -17px;
+            right: 31px;
+
+            display: block;
+            width: 48.75px;
+            height: 21.5px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+
+        width: 101px;
+        height: 36px;
+        border-radius: 6px;
+        background: var(--filter-btn-bg-color);
+
+        @include abstracts.screen(md) {
+            width: 104px;
+        }
+
+        &__label {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 142.857%;
+            color: var(--filter-btn-label-color);
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+
+        &__icon {
+            flex-shrink: 0;
+
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+    }
+}
+
+.filter-form {
+    &__row {
+        gap: 30px;
+    }
+
+    &__column + &__column {
+        padding-left: 30px;
+        border-left: 1px solid #eee;
+    }
+
+    &__group {
+        margin-top: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+
+        margin-top: 20px;
     }
 }
