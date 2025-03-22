@@ -24,10 +24,10 @@
     &__inner {
         position: relative;
 
-        padding: 30px;
+        padding-top: 30px;
         border-radius: 20px;
-        background-color: #fff;
-        box-shadow: 0px 40px 90px rgba(200, 200, 200, 0.4);
+        background-color: var(--filter-inner-bg-color);
+        box-shadow: 0px 40px 90px var(--filter-inner-shadow-color);
 
         &-arrow-up {
             position: absolute;
@@ -37,6 +37,18 @@
             display: block;
             width: 48.75px;
             height: 21.5px;
+            filter: var(--filter-inner-arrow-up-color);
+        }
+
+        @include abstracts.screen(md) {
+            padding-top: 16px;
+        }
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            inset: 0;
+            padding-top: 20px;
+            border-radius: 0;
         }
     }
 
@@ -81,15 +93,84 @@
 .filter-form {
     &__row {
         gap: 30px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+    }
+
+    &__content {
+        max-height: calc(100vh - 376px);
+
+        padding-bottom: 86px;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+        @include abstracts.screen(md) {
+            max-height: calc(100vh - 265px);
+        }
+
+        @include abstracts.screen(sm) {
+            max-height: calc(100vh - 190px);
+        }
+    }
+
+    &__title,
+    &__content {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include abstracts.screen(md) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__column + &__column {
         padding-left: 30px;
         border-left: 1px solid #eee;
+
+        @include abstracts.screen(xl) {
+            padding-left: unset;
+            border-left: none;
+
+            padding-top: 22px;
+            border-top: 1px solid #eee;
+        }
+
+        @include abstracts.screen(md) {
+            padding-top: 12px;
+        }
     }
 
     &__group {
         margin-top: 20px;
+
+        @include abstracts.screen(xl) {
+            flex-grow: 1;
+        }
+    }
+
+    &__input-wrap--small {
+        width: 121px;
+
+        @include abstracts.screen(xl) {
+            width: unset;
+        }
+    }
+
+    &__search {
+        @include abstracts.screen(sm) {
+            min-width: unset;
+        }
     }
 
     &__bottom {
@@ -99,5 +180,25 @@
         gap: 10px;
 
         margin-top: 20px;
+
+        position: sticky;
+        bottom: 0;
+        padding: 8px 30px 30px;
+        border-radius: 0 0 20px 20px;
+        background-color: var(--filter-inner-bg-color);
+
+        @include abstracts.screen(md) {
+            padding: 8px 16px 16px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 14px 20px 40px;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(sm) {
+            flex: 1;
+        }
     }
 }

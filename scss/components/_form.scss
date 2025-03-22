@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .form {
     &__row {
         display: flex;
@@ -58,7 +60,7 @@
             border-radius: 50%;
 
             border: 6px solid #ffb700;
-            background-color: #fff;
+            background-color: var(--form-slider-before-after-bg-color);
         }
 
         &::before {
@@ -81,7 +83,6 @@
         border: 1px solid #d2d1d6;
 
         &--small {
-            width: 121px;
             height: 36px;
         }
     }
@@ -95,6 +96,10 @@
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__select-wrap {
@@ -116,6 +121,10 @@
             padding: 0;
             border-radius: unset;
             border: none;
+
+            @include abstracts.screen(md) {
+                gap: 10px;
+            }
         }
     }
 
@@ -127,6 +136,10 @@
         font-weight: 500;
         line-height: 142.857%;
         cursor: pointer;
+
+        @include abstracts.screen(xl) {
+            flex: 1;
+        }
 
         &-size {
             justify-content: space-between;
@@ -156,10 +169,14 @@
             border-radius: 6px;
             color: #9e9da8;
 
-            background-color: #f8f8fb;
+            background-color: var(--form-select-label-bg-color);
 
             &:hover {
                 color: inherit;
+            }
+
+            @include abstracts.screen(xl) {
+                flex: unset;
             }
         }
     }

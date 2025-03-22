@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="">
+<html lang="vi" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -197,7 +197,7 @@
                                         <p class="form__title filter-form__title">Filter</p>
 
                                         <!-- Filter form row -->
-                                        <div class="form__row filter-form__row">
+                                        <div class="form__row filter-form__row filter-form__content">
                                             <!-- Filter form column 1 -->
                                             <div class="form__column filter-form__column">
                                                 <label for="" class="form__label">Price</label>
@@ -207,14 +207,14 @@
                                                 <div class="form__row filter-form__row">
                                                     <div class="form__group filter-form__group">
                                                         <label for="" class="form__label form__label--small">Minimum</label>
-                                                        <div class="form__input-wrap form__input-wrap--small">
+                                                        <div class="form__input-wrap form__input-wrap--small filter-form__input-wrap--small">
                                                             <input type="text" value="$30.00" class="form__input" />
                                                         </div>
                                                     </div>
 
                                                     <div class="form__group filter-form__group">
                                                         <label for="" class="form__label form__label--small">Maximum</label>
-                                                        <div class="form__input-wrap form__input-wrap--small">
+                                                        <div class="form__input-wrap form__input-wrap--small filter-form__input-wrap--small">
                                                             <input type="text" value="$100.00" class="form__input" />
                                                         </div>
                                                     </div>
@@ -239,9 +239,9 @@
 
                                                 <div class="form__group filter-form__group">
                                                     <div class="form__select-wrap form__select-wrap--small">
-                                                        <div class="form__select form__select-label">Small</div>
-                                                        <div class="form__select form__select-label">Medium</div>
-                                                        <div class="form__select form__select-label">Large</div>
+                                                        <label class="form__select form__select-label">Small</label>
+                                                        <label class="form__select form__select-label">Medium</label>
+                                                        <label class="form__select form__select-label">Large</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,7 +250,7 @@
                                             <div class="form__column filter-form__column">
                                                 <label for="" class="form__label">Brand</label>
                                                 <div class="form__group filter-form__group">
-                                                    <div class="form__search">
+                                                    <div class="form__search filter-form__search">
                                                         <input type="text" class="form__search-input" placeholder="Search brand name" />
                                                         <button class="form__search-btn js-toggle" toggle-target="#filter-dropdown">
                                                             <img src="./assets/icons/search.svg" alt="" class="form__search-btn-icon icon" />
@@ -260,9 +260,9 @@
 
                                                 <div class="form__group filter-form__group">
                                                     <div class="form__select-wrap form__select-wrap--small">
-                                                        <div class="form__select form__select-label">Lavazza</div>
-                                                        <div class="form__select form__select-label">Nescafe</div>
-                                                        <div class="form__select form__select-label">Starbucks</div>
+                                                        <label class="form__select form__select-label">Lavazza</label>
+                                                        <label class="form__select form__select-label">Nescafe</label>
+                                                        <label class="form__select form__select-label">Starbucks</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -270,8 +270,8 @@
 
                                         <!-- Filter form bottom -->
                                         <div class="filter-form__bottom">
-                                            <button class="btn btn--text js-toggle" toggle-target="#filter-dropdown">Cancel</button>
-                                            <button class="btn btn--primary js-toggle" toggle-target="#filter-dropdown">Show Result</button>
+                                            <button class="filter-form__btn btn btn--text js-toggle" toggle-target="#filter-dropdown">Cancel</button>
+                                            <button class="filter-form__btn btn btn--primary js-toggle" toggle-target="#filter-dropdown">Show Result</button>
                                         </div>
                                     </form>
                                 </div>

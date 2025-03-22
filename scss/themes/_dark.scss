@@ -39,6 +39,15 @@ html.dark {
     --filter-btn-bg-color: #171c28;
     --filter-btn-label-color: #fff;
 
+    // Filter Form
+    --filter-inner-bg-color: #323743;
+    --filter-inner-shadow-color: rgba(23, 28, 40, 0.4);
+    --filter-inner-arrow-up-color: brightness(0) saturate(100%) invert(18%) sepia(4%) saturate(2366%) hue-rotate(185deg) brightness(100%) contrast(91%);
+
+    // Form
+    --form-slider-before-after-bg-color: #323743;
+    --form-select-label-bg-color: #171c28;
+
     // Product item
     --product-item-bg-color: #171c28;
     --product-item-shadow-color: rgba(0, 0, 0, 0.2);
