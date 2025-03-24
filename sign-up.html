@@ -23,28 +23,94 @@
         <script src="./assets/js/scrips.js"></script>
     </head>
     <body>
-        <!-- Header -->
-        <header id="header"></header>
-        <script>
-            load("#header", "./template/header.html");
-        </script>
+        <!-- Main Auth -->
+        <main class="auth">
+            <!-- Auth media -->
+            <div class="auth-media">
+                <!-- Auth media Logo -->
+                <a href="./" class="logo auth-media__logo d-none d-md-flex">
+                    <img src="./assets/img/logo.svg" alt="Grocery Mart" class="logo__image auth-media__logo-image" />
+                    <p class="logo__text auth-media__logo-text">grocerymart</p>
+                </a>
 
-        <!-- Main -->
-        <main class="sign-in">
-            <h1>Sign up</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia veniam unde ab excepturi voluptatem
-                molestiae, molestias saepe dolore sequi, nam a vero debitis minus magni, itaque delectus! Ratione,
-                incidunt veritatis.
-            </p>
-            <a href="./">Home</a>
-            <a href="./sign-in.html">Sign in</a>
+                <!-- Auth media Image -->
+                <figure class="auth-media__image">
+                    <picture class="auth-media__image-wrap">
+                        <source media="(max-width: 767.98px)" srcset="./assets/img/auth/auth-media-image-img-1-md.png" />
+                        <img src="./assets/img/auth/auth-media-image-img-1.png" alt="" class="auth-media__image-img" />
+                    </picture>
+                </figure>
+
+                <!-- Auth media text -->
+                <p class="auth-media__text">The best of luxury brand values, high quality products, and innovative services</p>
+
+                <!-- Auth media Next Step -->
+                <img src="./assets/img/auth/auth-media-next-step.png" alt="" class="auth-media__next-step d-none d-md-block" />
+            </div>
+
+            <!-- Auth content -->
+            <section class="auth-content">
+                <div class="auth-content__inner">
+                    <!-- Auth content Logo -->
+                    <a href="./" class="logo auth-content__logo">
+                        <img src="./assets/img/logo.svg" alt="Grocery Mart" class="logo__image auth-content__logo-image" />
+                        <p class="logo__text auth-content__logo-text">grocerymart</p>
+                    </a>
+
+                    <!-- Auth content Heading -->
+                    <h1 class="auth-content__heading">Sign Up</h1>
+
+                    <!-- Auth content DESC -->
+                    <p class="auth-content__desc">Let’s create your account and Shop like a pro and save money.</p>
+
+                    <!-- Auth form -->
+                    <form action="./index-logined.html" class="form auth-form">
+                        <div class="form__group auth-form__group">
+                            <div class="form__input-wrap auth-form__input-wrap">
+                                <input type="email" placeholder="Email" class="form__input auth-form__input" required />
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                            </div>
+                        </div>
+
+                        <div class="form__group auth-form__group">
+                            <div class="form__input-wrap auth-form__input-wrap">
+                                <input type="password" placeholder="Password" class="form__input auth-form__input" required />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                            </div>
+                        </div>
+
+                        <div class="form__group auth-form__group">
+                            <div class="form__input-wrap auth-form__input-wrap">
+                                <input type="password" placeholder="Confirm Password" class="form__input auth-form__input" required />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                            </div>
+                        </div>
+
+                        <div class="form__group form__group--inline auth-form__group">
+                            <label class="auth-form__checkbox">
+                                <input type="checkbox" name="" id="" class="auth-form__checkbox-input" />
+                                <span class="auth-form__checkbox-label">Set as default card</span>
+                            </label>
+
+                            <a href="#!" class="auth-form__link">Recovery Password</a>
+                        </div>
+
+                        <div class="auth-form__group-btn">
+                            <button class="btn btn--primary auth-form__btn">Sign Up</button>
+                            <button class="btn btn--outline auth-form__btn">
+                                <img src="./assets/icons/google-icon.svg" alt="" class="auth-form__btn-icon" />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Auth text -->
+                    <p class="auth-text">
+                        You have an account yet?
+                        <a href="#!" class="auth-text__link">Sign In</a>
+                    </p>
+                </div>
+            </section>
         </main>
-
-        <!-- Footer -->
-        <footer id="footer"></footer>
-        <script>
-            load("#footer", "./template/footer.html");
-        </script>
     </body>
 </html>

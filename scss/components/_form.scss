@@ -6,6 +6,11 @@
     }
 
     &__group {
+        &--inline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__title {
