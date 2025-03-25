@@ -1,6 +1,13 @@
+@use "../abstracts";
+
 .auth {
+    position: relative;
     display: flex;
     min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
 
     &-media,
     &-content {
@@ -13,14 +20,17 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
-        padding: 80px 24px 50px;
+        padding: 0 24px;
 
         &__image {
             width: min(422px, 100%);
 
             &-img {
                 width: 100%;
+            }
+
+            @include abstracts.screen(md) {
+                width: min(314px, 100%);
             }
         }
 
@@ -32,6 +42,33 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+            }
+        }
+
+        &__logo,
+        &__next-step {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__logo {
+            top: 80px;
+        }
+
+        &__next-step {
+            bottom: 50px;
+
+            width: 75px;
+
+            &-icon {
+                width: 100%;
+                filter: brightness(0) saturate(100%) invert(95%) sepia(24%) saturate(6166%) hue-rotate(156deg) brightness(95%) contrast(89%);
+            }
         }
     }
 
@@ -39,6 +76,21 @@
     &-content {
         padding: 50px 24px;
         background-color: #fff;
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            overflow-y: auto;
+            transition: translate 0.3s;
+
+            // Mặc định là ẩn Auth content
+            // Khi JavaScript tác động để mất .hide đi thì
+            // translate sẽ về 0 (.auth-content lại hiện ra)
+            &.hide {
+                translate: 100%;
+            }
+        }
 
         &__inner {
             display: flex;
@@ -56,6 +108,11 @@
             font-size: 3rem;
             font-weight: 500;
             line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 2.2rem;
+                line-height: 145.455%;
+            }
         }
 
         &__desc {
@@ -67,6 +124,11 @@
             font-weight: 500;
             line-height: 146.667%;
             color: #9e9da8;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
         }
     }
 
@@ -74,29 +136,39 @@
         margin-top: 60px;
         width: 100%;
 
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+
         &__group + &__group {
             margin-top: 30px;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
         }
 
         &__input {
             font-size: 1.8rem;
             font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+
+            &::placeholder {
+                color: #d2d1d6;
+            }
 
             &-wrap {
                 height: 50px;
                 border-radius: 10px;
-            }
 
-            &::placeholder {
-                font-size: 1.8rem;
-                font-weight: 500;
-                line-height: 144.444%;
-                color: #d2d1d6;
-            }
-
-            &-icon {
-                flex-shrink: 0;
-                margin-right: 12px;
+                @include abstracts.screen(md) {
+                    height: 48px;
+                }
             }
         }
 
@@ -105,6 +177,11 @@
             font-weight: 500;
             line-height: 146.667%;
             color: #0071dc;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -128,6 +205,12 @@
                 color: #9e9da8;
 
                 cursor: pointer;
+
+                @include abstracts.screen(md) {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 142.857%;
+                }
             }
 
             &-label::before,
@@ -136,6 +219,7 @@
             }
 
             &-label::before {
+                flex-shrink: 0;
                 display: inline-block;
                 margin-right: 10px;
                 width: 20px;
@@ -169,6 +253,10 @@
 
         &__group-btn {
             margin-top: 50px;
+
+            @include abstracts.screen(md) {
+                margin-top: 52px;
+            }
         }
 
         &__btn {
@@ -196,8 +284,17 @@
         line-height: 144.444%;
         color: #9e9da8;
 
+        @include abstracts.screen(md) {
+            margin-top: 56px;
+
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
         &__link {
             margin-left: 10px;
+
+            font-size: inherit;
             font-weight: 500;
             color: #0071dc;
 

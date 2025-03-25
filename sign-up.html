@@ -45,11 +45,13 @@
                 <p class="auth-media__text">The best of luxury brand values, high quality products, and innovative services</p>
 
                 <!-- Auth media Next Step -->
-                <img src="./assets/img/auth/auth-media-next-step.png" alt="" class="auth-media__next-step d-none d-md-block" />
+                <button class="auth-media__next-step d-none d-md-block js-toggle" toggle-target="#auth-content">
+                    <img src="./assets/img/auth/auth-media-next-step.png" alt="" class="auth-media__next-step-icon" />
+                </button>
             </div>
 
             <!-- Auth content -->
-            <section class="auth-content">
+            <section id="auth-content" class="auth-content hide">
                 <div class="auth-content__inner">
                     <!-- Auth content Logo -->
                     <a href="./" class="logo auth-content__logo">
@@ -67,30 +69,36 @@
                     <form action="./index-logined.html" class="form auth-form">
                         <div class="form__group auth-form__group">
                             <div class="form__input-wrap auth-form__input-wrap">
-                                <input type="email" placeholder="Email" class="form__input auth-form__input" required />
+                                <input type="email" placeholder="Email" class="form__input auth-form__input" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
                                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                                <img src="./assets/icons/form-wanning-icon.svg" alt="" class="form__input-icon-error auth-form__input-icon-error" />
                             </div>
+                            <p class="form__error">Email format is incorrect.</p>
                         </div>
 
                         <div class="form__group auth-form__group">
                             <div class="form__input-wrap auth-form__input-wrap">
-                                <input type="password" placeholder="Password" class="form__input auth-form__input" required />
+                                <input type="password" placeholder="Password" class="form__input auth-form__input" required minlength="6" />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                                <img src="./assets/icons/form-wanning-icon.svg" alt="" class="form__input-icon-error auth-form__input-icon-error" />
                             </div>
+                            <p class="form__error">Password minimum 6 characters</p>
                         </div>
 
                         <div class="form__group auth-form__group">
                             <div class="form__input-wrap auth-form__input-wrap">
-                                <input type="password" placeholder="Confirm Password" class="form__input auth-form__input" required />
+                                <input type="password" placeholder="Confirm Password" class="form__input auth-form__input" required minlength="6" />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                                <img src="./assets/icons/form-wanning-icon.svg" alt="" class="form__input-icon-error auth-form__input-icon-error" />
                             </div>
+                            <p class="form__error">Password minimum 6 characters</p>
                         </div>
 
                         <div class="form__group form__group--inline auth-form__group">
-                            <label class="auth-form__checkbox">
-                                <input type="checkbox" name="" id="" class="auth-form__checkbox-input" />
-                                <span class="auth-form__checkbox-label">Set as default card</span>
-                            </label>
+                            <div class="auth-form__checkbox">
+                                <input type="checkbox" name="" id="set-as-default" class="auth-form__checkbox-input" />
+                                <label for="set-as-default" class="auth-form__checkbox-label">Set as default</label>
+                            </div>
 
                             <a href="#!" class="auth-form__link">Recovery Password</a>
                         </div>
@@ -112,5 +120,10 @@
                 </div>
             </section>
         </main>
+
+        <!-- JavaScript -->
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
 </html>

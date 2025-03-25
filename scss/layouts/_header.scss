@@ -104,6 +104,10 @@
 
         &-sign {
             font-size: 1.5rem;
+
+            @include abstracts.screen(md) {
+                height: 40px;
+            }
         }
     }
 
