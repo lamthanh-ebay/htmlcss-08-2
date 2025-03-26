@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,9 +23,87 @@
         <script src="./assets/js/scrips.js"></script>
     </head>
     <body>
-        <!-- Main -->
-        <main class="sign-in">
-            <h1>Sign in</h1>
+        <!-- Main Auth -->
+        <main class="auth">
+            <!-- Auth media -->
+            <div class="auth-media d-md-none">
+                <!-- Auth media Image -->
+                <figure class="auth-media__image">
+                    <picture class="auth-media__image-wrap">
+                        <source media="(max-width: 767.98px)" srcset="./assets/img/auth/auth-media-image-img-1-md.png" />
+                        <img src="./assets/img/auth/auth-media-image-img-1.png" alt="" class="auth-media__image-img" />
+                    </picture>
+                </figure>
+
+                <!-- Auth media text -->
+                <p class="auth-media__text">The best of luxury brand values, high quality products, and innovative services</p>
+            </div>
+
+            <!-- Auth content -->
+            <section class="auth-content">
+                <div class="auth-content__inner">
+                    <!-- Auth content Logo -->
+                    <a href="./" class="logo auth-content__logo">
+                        <img src="./assets/img/logo.svg" alt="Grocery Mart" class="logo__image auth-content__logo-image" />
+                        <p class="logo__text auth-content__logo-text">grocerymart</p>
+                    </a>
+
+                    <!-- Auth content Heading -->
+                    <h1 class="auth-content__heading">Hello Again!</h1>
+
+                    <!-- Auth content DESC -->
+                    <p class="auth-content__desc">Welcome back to sign in. As a returning customer, you have access to your previously saved all information.</p>
+
+                    <!-- Auth form -->
+                    <form action="./index-logined.html" class="form auth-form">
+                        <div class="form__group auth-form__group">
+                            <div class="form__input-wrap auth-form__input-wrap">
+                                <input type="email" placeholder="Email" class="form__input auth-form__input" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                                <img src="./assets/icons/form-wanning-icon.svg" alt="" class="form__input-icon-error auth-form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Email format is incorrect.</p>
+                        </div>
+
+                        <div class="form__group auth-form__group">
+                            <div class="form__input-wrap auth-form__input-wrap">
+                                <input type="password" placeholder="Password" class="form__input auth-form__input" required minlength="6" />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon auth-form__input-icon" />
+                                <img src="./assets/icons/form-wanning-icon.svg" alt="" class="form__input-icon-error auth-form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Password minimum 6 characters</p>
+                        </div>
+
+                        <div class="form__group form__group--inline auth-form__group">
+                            <div class="auth-form__checkbox">
+                                <input type="checkbox" name="" id="set-as-default" class="auth-form__checkbox-input" />
+                                <label for="set-as-default" class="auth-form__checkbox-label">Set as default</label>
+                            </div>
+
+                            <a href="#!" class="auth-form__link">Recovery Password</a>
+                        </div>
+
+                        <div class="auth-form__group-btn">
+                            <button class="btn btn--primary auth-form__btn">Sign in</button>
+                            <button class="btn btn--outline auth-form__btn auth-form__btn--with-google">
+                                <img src="./assets/icons/google-icon.svg" alt="" class="auth-form__btn--with-google-icon" />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Auth text -->
+                    <p class="auth-text">
+                        Don’t have an account yet?
+                        <a href="./sign-up.html" class="auth-text__link">Sign Up</a>
+                    </p>
+                </div>
+            </section>
         </main>
+
+        <!-- JavaScript -->
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
 </html>

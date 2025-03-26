@@ -21,6 +21,7 @@
         justify-content: center;
         flex-direction: column;
         padding: 0 24px;
+        background-color: var(--auth-media-bg-color);
 
         &__image {
             width: min(422px, 100%);
@@ -42,6 +43,7 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+            color: var(--auth-media-text-color);
 
             @include abstracts.screen(md) {
                 font-size: 1.5rem;
@@ -75,7 +77,7 @@
     // Auth content
     &-content {
         padding: 50px 24px;
-        background-color: #fff;
+        background-color: var(--auth-content-bg-color);
 
         @include abstracts.screen(md) {
             position: fixed;
@@ -83,6 +85,8 @@
             z-index: 1;
             overflow-y: auto;
             transition: translate 0.3s;
+
+            padding: 24px;
 
             // Mặc định là ẩn Auth content
             // Khi JavaScript tác động để mất .hide đi thì
@@ -109,7 +113,10 @@
             font-weight: 500;
             line-height: 146.667%;
 
+            color: var(--auth-content-heading-color);
+
             @include abstracts.screen(md) {
+                margin-top: 10px;
                 font-size: 2.2rem;
                 line-height: 145.455%;
             }
@@ -117,7 +124,7 @@
 
         &__desc {
             margin-top: 10px;
-            padding: 0 30px;
+            padding: 0 20px;
 
             text-align: center;
             font-size: 1.5rem;
@@ -137,7 +144,7 @@
         width: 100%;
 
         @include abstracts.screen(md) {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         &__group + &__group {
@@ -159,7 +166,7 @@
             }
 
             &::placeholder {
-                color: #d2d1d6;
+                color: var(--auth-form-input-placeholder-color);
             }
 
             &-wrap {
@@ -255,7 +262,7 @@
             margin-top: 50px;
 
             @include abstracts.screen(md) {
-                margin-top: 52px;
+                margin-top: 20px;
             }
         }
 
@@ -272,6 +279,18 @@
 
             & + & {
                 margin-top: 30px;
+
+                @include abstracts.screen(md) {
+                    margin-top: 20px;
+                }
+            }
+
+            &--with-google {
+                color: var(--auth-form-btn-with-google-color);
+
+                &-icon {
+                    filter: var(--auth-form-btn-with-google-icon-filter);
+                }
             }
         }
     }
@@ -285,7 +304,7 @@
         color: #9e9da8;
 
         @include abstracts.screen(md) {
-            margin-top: 56px;
+            margin-top: 30px;
 
             font-size: 1.6rem;
             line-height: 150%;

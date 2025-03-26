@@ -67,6 +67,10 @@ html {
     --social-item-hover-bg-color: #77dae6;
     --social-item-icon-hover-bg-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2701%) hue-rotate(160deg) brightness(106%) contrast(92%);
 
+    // Auth page
+    --auth-content-bg-color: #fff;
+    --auth-form-input-placeholder-color: #d2d1d6;
+
     /******************** RESPONSIVE ********************/
 
     // Header
@@ -77,5 +81,10 @@ html {
     // Filter btn
     @include abstracts.screen(md) {
         --filter-btn-label-color: #1a162e;
+    }
+
+    // Auth Page
+    @include abstracts.screen(md) {
+        --auth-media-bg-color: #fff;
     }
 }

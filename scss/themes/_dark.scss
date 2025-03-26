@@ -69,6 +69,15 @@ html.dark {
     --social-item-hover-bg-color: #77dae6;
     --social-item-icon-hover-bg-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2701%) hue-rotate(160deg) brightness(106%) contrast(92%);
 
+    // Auth Page
+    --auth-media-bg-color: #171c28;
+    --auth-media-text-color: #b9babe;
+    --auth-content-bg-color: #292e39;
+    --auth-content-heading-color: #b9babe;
+    --auth-form-input-placeholder-color: #b9babe;
+    --auth-form-btn-with-google-color: #b9babe;
+    --auth-form-btn-with-google-icon-filter: brightness(0) saturate(100%) invert(86%) sepia(7%) saturate(108%) hue-rotate(191deg) brightness(88%) contrast(84%);
+
     /******************** RESPONSIVE ********************/
 
     // Filter btn
