@@ -137,6 +137,12 @@
                 line-height: 142.857%;
             }
         }
+
+        &__message {
+            &--success {
+                margin-top: 20px;
+            }
+        }
     }
 
     &-form {
@@ -289,9 +295,16 @@
                 color: var(--auth-form-btn-with-google-color);
 
                 &-icon {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: contain;
                     filter: var(--auth-form-btn-with-google-icon-filter);
                 }
             }
+        }
+
+        &__reset-pass {
+            margin-top: 20px;
         }
     }
 
