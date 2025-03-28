@@ -1537,6 +1537,9 @@ html {
   --social-item-icon-hover-bg-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2701%) hue-rotate(160deg) brightness(106%) contrast(92%);
   --auth-content-bg-color: #fff;
   --auth-form-input-placeholder-color: #d2d1d6;
+  --product-page-bg-color: #fff;
+  --breadcrumbs-bg-color: #f6f6f6;
+  --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
   /******************** RESPONSIVE ********************/
 }
 @media screen and (max-width: 767.98px) {
@@ -1603,6 +1606,9 @@ html.dark {
   --auth-form-input-placeholder-color: #b9babe;
   --auth-form-btn-with-google-color: #b9babe;
   --auth-form-btn-with-google-icon-filter: brightness(0) saturate(100%) invert(86%) sepia(7%) saturate(108%) hue-rotate(191deg) brightness(88%) contrast(84%);
+  --product-page-bg-color: #292e39;
+  --breadcrumbs-bg-color: #171c28;
+  --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
   /******************** RESPONSIVE ********************/
 }
 @media screen and (max-width: 767.98px) {
@@ -2667,6 +2673,59 @@ html.dark {
   background-color: rgba(33, 213, 33, 0.2);
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--breadcrumbs-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow-color);
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .breadcrumbs__list {
+    gap: 0 16px;
+    padding: 8px 0;
+  }
+}
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  color: inherit;
+  cursor: default;
+}
+.breadcrumbs__item:last-child .breadcrumbs__icon {
+  display: none;
+}
+.breadcrumbs__item:not(:last-child) .breadcrumbs__link:hover {
+  color: inherit;
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9e9da8;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767.98px) {
+  .breadcrumbs__link {
+    padding: 8px 0;
+    font-size: 1.4rem;
+  }
+}
+.breadcrumbs__icon {
+  display: block;
+  margin-bottom: -2px;
+}
+
 .header {
   background-color: var(--header-bg-color);
 }
@@ -3513,6 +3572,15 @@ html.dark {
 }
 .auth-text__link:hover {
   text-decoration: underline;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--product-page-bg-color);
+}
+.product-page__section {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
