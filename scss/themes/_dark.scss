@@ -80,15 +80,28 @@ html.dark {
 
     // Product page
     --product-page-bg-color: #292e39;
+    --product-page-info-bg-color: #171c28;
+    --product-page-form-select-label-bg-color: #292e39;
+    --product-page-info-text-color: #eee;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
     --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
+
+    // Search bar
+    --search-bar-bg-color: #171c28;
+    --search-bar-placeholder-color: #b9babe;
+    --search-bar-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(6%) saturate(123%) hue-rotate(190deg) brightness(84%) contrast(86%);
 
     /******************** RESPONSIVE ********************/
 
     // Filter btn
     @include abstracts.screen(md) {
         --filter-btn-label-color: #fff;
+    }
+
+    // Product page
+    @include abstracts.screen(md) {
+        --product-page-form-bg-color: #171c28;
     }
 }

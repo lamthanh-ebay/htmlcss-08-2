@@ -30,8 +30,19 @@
         </script>
 
         <!-- Main -->
-        <main class="product-page" style="height: 1000px">
+        <main class="product-page">
             <div class="container">
+                <!-- Search bar -->
+                <div class="product-page__section">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__btn">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Breadcrumbs -->
                 <div class="product-page__section">
                     <div class="breadcrumbs">
                         <ul class="breadcrumbs__list">
@@ -62,6 +73,160 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Product Preview -->
+                <section class="product-page__section">
+                    <form action="" class="form product-page__form">
+                        <div class="row">
+                            <!-- Product image -->
+                            <div class="col-5 col-xl-6 col-lg-12">
+                                <div class="product-page__preview">
+                                    <div class="product-page__image-preview">
+                                        <figure class="product-page__image">
+                                            <!-- Product image 1 -->
+                                            <picture class="product-page__image-wrap">
+                                                <source media="(max-width: 767.98px)" srcset="./assets/img/products/product-item/product-item-1.png" />
+                                                <img src="./assets/img/products/product-item/product-item-1.png" alt="" class="product-page__image-img" />
+                                            </picture>
+
+                                            <!-- Product image 2 -->
+                                            <picture class="product-page__image-wrap">
+                                                <source media="(max-width: 767.98px)" srcset="./assets/img/products/product-item/product-item-2.png" />
+                                                <img src="./assets/img/products/product-item/product-item-2.png" alt="" class="product-page__image-img" />
+                                            </picture>
+
+                                            <!-- Product image 3 -->
+                                            <picture class="product-page__image-wrap">
+                                                <source media="(max-width: 767.98px)" srcset="./assets/img/products/product-item/product-item-3.png" />
+                                                <img src="./assets/img/products/product-item/product-item-3.png" alt="" class="product-page__image-img" />
+                                            </picture>
+
+                                            <!-- Product image 4 -->
+                                            <picture class="product-page__image-wrap">
+                                                <source media="(max-width: 767.98px)" srcset="./assets/img/products/product-item/product-item-4.png" />
+                                                <img src="./assets/img/products/product-item/product-item-4.png" alt="" class="product-page__image-img" />
+                                            </picture>
+                                        </figure>
+
+                                        <!-- Product slider -->
+
+                                        <div class="product-page__image-slider">
+                                            <img src="./assets/icons/arrow-right-inner.svg" alt="" class="product-page__image-slider-icon" />
+                                        </div>
+
+                                        <div class="product-page__image-slider">
+                                            <img src="./assets/icons/arrow-right-inner.svg" alt="" class="product-page__image-slider-icon" />
+                                        </div>
+                                    </div>
+
+                                    <figure class="product-page__thumb">
+                                        <!-- Product Page Thumb 1 -->
+                                        <picture class="product-page__thumb-wrap product-page__thumb-wrap--current">
+                                            <img src="./assets/img/products/product-item/product-item-thumb-1.png" alt="" class="product-page__thumb-img" />
+                                        </picture>
+
+                                        <!-- Product Page Thumb 2 -->
+                                        <picture class="product-page__thumb-wrap">
+                                            <img src="./assets/img/products/product-item/product-item-thumb-2.png" alt="" class="product-page__thumb-img" />
+                                        </picture>
+
+                                        <!-- Product Page Thumb 3 -->
+                                        <picture class="product-page__thumb-wrap">
+                                            <img src="./assets/img/products/product-item/product-item-thumb-3.png" alt="" class="product-page__thumb-img" />
+                                        </picture>
+
+                                        <!-- Product Page Thumb 4 -->
+                                        <picture class="product-page__thumb-wrap">
+                                            <img src="./assets/img/products/product-item/product-item-thumb-4.png" alt="" class="product-page__thumb-img" />
+                                        </picture>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Product info -->
+                            <div class="col-7 col-xl-6 col-lg-12">
+                                <div class="product-page__info">
+                                    <h1 class="product-page__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h1>
+                                    <div class="row">
+                                        <div class="col-5 col-xxl-6 col-xl-12 col-lg-6 col-md-12">
+                                            <div class="product-prop">
+                                                <img src="./assets/icons/star.svg" alt="" class="product-prop__icon" />
+                                                <div class="product-prop__right">
+                                                    <p class="product-prop__title">(3.5) 1100 reviews</p>
+                                                </div>
+                                            </div>
+
+                                            <label for="" class="form__label product-page__form-label">Size/Weight</label>
+                                            <div class="form__group product-page__form-group">
+                                                <div class="form__select-wrap">
+                                                    <div class="form__select form__select-size product-page__form-select-size--lager">
+                                                        <span>500g</span>
+                                                        <img src="./assets/icons/arrow-down-2.svg" alt="" class="form__select-icon icon" />
+                                                    </div>
+                                                    <div class="form__select form__select-size">
+                                                        <span>Gram</span>
+                                                        <img src="./assets/icons/arrow-down-2.svg" alt="" class="form__select-icon icon" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form__group product-page__form-group">
+                                                <div class="form__select-wrap form__select-wrap--small">
+                                                    <label class="form__select form__select-label product-page__form-select-label">Small</label>
+                                                    <label class="form__select form__select-label product-page__form-select-label">Medium</label>
+                                                    <label class="form__select form__select-label product-page__form-select-label">Large</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 col-xxl-6 col-xl-12 col-lg-6 col-md-12">
+                                            <div class="product-props">
+                                                <div class="product-prop">
+                                                    <img src="./assets/icons/document.svg" alt="" class="product-prop__icon icon" />
+                                                    <div class="product-prop__right">
+                                                        <p class="product-prop__title">Compare</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="product-prop">
+                                                    <img src="./assets/icons/buy.svg" alt="" class="product-prop__icon icon" />
+                                                    <div class="product-prop__right">
+                                                        <p class="product-prop__title">Delivery</p>
+                                                        <p class="product-prop__desc">From $6 for 1-3 days</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="product-prop">
+                                                    <img src="./assets/icons/bag.svg" alt="" class="product-prop__icon icon" />
+                                                    <div class="product-prop__right">
+                                                        <p class="product-prop__title">Pickup</p>
+                                                        <p class="product-prop__desc">Out of 2 store, today</p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Product info card -->
+                                                <div class="product-info__card">
+                                                    <div class="product-info__row">
+                                                        <span class="product-info__price">$500.00</span>
+                                                        <span class="product-info__tax">10%</span>
+                                                    </div>
+                                                    <p class="product-info__total">$540.00</p>
+                                                    <div class="product-info__row">
+                                                        <button class="btn btn--primary product-info__add-to-cart">Add to cart</button>
+                                                        <div class="product-info__favorite">
+                                                            <img src="./assets/icons/heart.svg" alt="" class="product-info__favorite-icon icon" />
+                                                            <!-- Product info favorite checked -->
+                                                            <!-- <img src="./assets/icons/heart-red.svg" alt="" class="product-info__favorite-icon--checked" /> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </div>
         </main>
 

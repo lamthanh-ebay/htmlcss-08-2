@@ -73,10 +73,16 @@ html {
 
     // Product page
     --product-page-bg-color: #fff;
+    --product-page-info-bg-color: #f6f6f6;
+    --product-page-form-select-label-bg-color: #ededf6;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+
+    // Search bar
+    --search-bar-bg-color: #fff;
+    --search-bar-placeholder-color: #9e9da8;
 
     /******************** RESPONSIVE ********************/
 
@@ -93,5 +99,16 @@ html {
     // Auth Page
     @include abstracts.screen(md) {
         --auth-media-bg-color: #fff;
+    }
+
+    // Product page
+    @include abstracts.screen(md) {
+        --product-page-bg-color: #fafafd;
+        --product-page-form-bg-color: #fff;
+    }
+
+    // Breadcrumbs
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg-color: #fff;
     }
 }
