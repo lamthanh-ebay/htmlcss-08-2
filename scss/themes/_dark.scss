@@ -83,6 +83,7 @@ html.dark {
     --product-page-info-bg-color: #171c28;
     --product-page-form-select-label-bg-color: #292e39;
     --product-page-info-text-color: #eee;
+    --product-content-bg-color: transparent;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
@@ -92,6 +93,9 @@ html.dark {
     --search-bar-bg-color: #171c28;
     --search-bar-placeholder-color: #b9babe;
     --search-bar-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(6%) saturate(123%) hue-rotate(190deg) brightness(84%) contrast(86%);
+
+    // Review card
+    --review-card-bg-color: #171c28;
 
     /******************** RESPONSIVE ********************/
 

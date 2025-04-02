@@ -213,3 +213,27 @@ function initJsToggle() {
         };
     });
 }
+
+// Đóng mở các Tab ở Product Content
+// Dán Class .js-tabs vào thẻ ôm cả các thẻ ul li và cả .product-content__inner chứa nội dung sản phẩm.
+window.addEventListener("template-loaded", () => {
+    const tabsSelector = "product-content__item";
+    const contentsSelector = "product-content__info";
+
+    const tabActive = `${tabsSelector}--current`;
+    const contentActive = `${contentsSelector}--current`;
+
+    const tabContainers = $$(".js-tabs");
+    tabContainers.forEach((tabContainer) => {
+        const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
+        const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
+        tabs.forEach((tab, index) => {
+            tab.onclick = () => {
+                tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
+                tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
+                tab.classList.add(tabActive);
+                contents[index].classList.add(contentActive);
+            };
+        });
+    });
+});

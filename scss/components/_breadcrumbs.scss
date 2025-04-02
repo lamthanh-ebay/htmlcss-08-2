@@ -52,6 +52,7 @@
         color: #9e9da8;
 
         white-space: nowrap;
+        user-select: none;
 
         @include abstracts.screen(md) {
             padding: 8px 0;

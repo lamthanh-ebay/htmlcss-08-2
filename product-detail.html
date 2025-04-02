@@ -26,7 +26,7 @@
         <!-- Header -->
         <header id="header" class="header"></header>
         <script>
-            load("#header", "./template/header-logined.html");
+            load("#header", "./template/header-logined-product-page.html");
         </script>
 
         <!-- Main -->
@@ -212,11 +212,11 @@
                                                     <p class="product-info__total">$540.00</p>
                                                     <div class="product-info__row">
                                                         <button class="btn btn--primary product-info__add-to-cart">Add to cart</button>
-                                                        <div class="product-info__favorite">
+                                                        <button class="product-info__favorite">
                                                             <img src="./assets/icons/heart.svg" alt="" class="product-info__favorite-icon icon" />
                                                             <!-- Product info favorite checked -->
                                                             <!-- <img src="./assets/icons/heart-red.svg" alt="" class="product-info__favorite-icon--checked" /> -->
-                                                        </div>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,23 +230,106 @@
 
                 <!-- Product Content -->
                 <section class="product-page__section">
-                    <div class="product-content">
+                    <div class="product-content js-tabs">
                         <ul class="product-content__list">
-                            <li class="product-content__item">Description</li>
-                            <li class="product-content__item">Features</li>
-                            <li class="product-content__item product-content__item--current">Review (1100)</li>
+                            <li class="product-content__item product-content__item--current">Description</li>
+                            <li class="product-content__item">Review (1100)</li>
                             <li class="product-content__item">Similar</li>
                         </ul>
 
                         <div class="product-content__inner">
-                            <div class="product-content__info">Content 1</div>
-                            <div class="product-content__info">Content 2</div>
-
                             <div class="product-content__info product-content__info--current">
+                                <div class="row">
+                                    <div class="col-8 col-xl-10 col-lg-12">
+                                        <div class="text-content">
+                                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet <a href="#!">consectetur</a> adipisicing elit. Error, quam officia tempora magnam perferendis ratione
+                                                ducimus eligendi nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam
+                                                <a href="#!">atque magnam?</a>
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/products/product-item/product-item-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+
+                                            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/products/product-item/product-item-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet <em>consectetur adipisicing elit.</em> Error, quam officia <i>tempora magnam perferendis</i> ratione
+                                                ducimus eligendi nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <hr />
+                                            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dolorem dolor deleniti.</h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam <b>officia tempora magnam</b> perferendis ratione ducimus
+                                                eligendi nemo impedit. Consequatur <strong>voluptatibus</strong> cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/products/product-item/product-item-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                                            </p>
+                                            <blockquote>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus
+                                                    eligendi nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                                </p>
+                                            </blockquote>
+
+                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat?</h3>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/products/product-item/product-item-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <hr />
+                                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos!</h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+
+                                            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, quam officia tempora magnam perferendis ratione ducimus eligendi
+                                                nemo impedit. Consequatur voluptatibus cupiditate praesentium odio itaque ea enim nam atque magnam?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-content__info">
                                 <h4 class="product-content__heading">What our customers are saying</h4>
 
                                 <!-- Product Review list -->
-                                <div class="row row-col-3">
+                                <div class="row row-col-3 gx-lg-2 row-col-md-1">
                                     <!-- Review card 1 -->
                                     <div class="col">
                                         <div class="review-card">
@@ -259,11 +342,13 @@
                                                 </div>
                                             </div>
                                             <div class="review-card__rating">
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                <div class="review-card__star-list">
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                </div>
                                                 <span class="review-card__score">(3.5) Review</span>
                                             </div>
                                         </div>
@@ -273,19 +358,21 @@
                                     <div class="col">
                                         <div class="review-card">
                                             <div class="review-card__content">
-                                                <img src="./assets/img/avatar/avatar-2.png" alt="Jakir Hussen" class="review-card__avatar" />
+                                                <img src="./assets/img/avatar/avatar-2.png" alt="Jubed Ahmed" class="review-card__avatar" />
 
                                                 <div class="review-card__info">
-                                                    <p class="review-card__title">Jakir Hussen</p>
-                                                    <p class="review-card__desc">Great product, I love this Coffee Beans</p>
+                                                    <p class="review-card__title">Jubed Ahmed</p>
+                                                    <p class="review-card__desc">Awesome Coffee, I love this Coffee Beans</p>
                                                 </div>
                                             </div>
                                             <div class="review-card__rating">
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                <div class="review-card__star-list">
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                </div>
                                                 <span class="review-card__score">(3.5) Review</span>
                                             </div>
                                         </div>
@@ -295,19 +382,21 @@
                                     <div class="col">
                                         <div class="review-card">
                                             <div class="review-card__content">
-                                                <img src="./assets/img/avatar/avatar-3.png" alt="Jakir Hussen" class="review-card__avatar" />
+                                                <img src="./assets/img/avatar/avatar-3.png" alt="Delwar Hussain" class="review-card__avatar" />
 
                                                 <div class="review-card__info">
-                                                    <p class="review-card__title">Jakir Hussen</p>
-                                                    <p class="review-card__desc">Great product, I love this Coffee Beans</p>
+                                                    <p class="review-card__title">Delwar Hussain</p>
+                                                    <p class="review-card__desc">Great product, I like this Coffee Beans Great product, I like this Coffee Beans</p>
                                                 </div>
                                             </div>
                                             <div class="review-card__rating">
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
-                                                <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                <div class="review-card__star-list">
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-haft.svg" alt="" class="review-card__star" />
+                                                    <img src="./assets/icons/star-blank.svg" alt="" class="review-card__star" />
+                                                </div>
                                                 <span class="review-card__score">(3.5) Review</span>
                                             </div>
                                         </div>
