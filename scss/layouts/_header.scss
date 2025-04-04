@@ -241,6 +241,12 @@
         border-color: var(--act-dropdown-border);
     }
 
+    &__separate {
+        margin: 20px 0;
+        height: 1px;
+        background-color: var(--act-dropdown-border);
+    }
+
     &__row {
         display: flex;
         align-items: center;

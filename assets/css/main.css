@@ -3196,6 +3196,11 @@ html.dark {
   border-style: solid;
   border-color: var(--act-dropdown-border);
 }
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  background-color: var(--act-dropdown-border);
+}
 .act-dropdown__row {
   display: flex;
   align-items: center;
