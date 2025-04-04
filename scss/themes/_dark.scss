@@ -22,10 +22,15 @@ html.dark {
     --top-act-user-bg-color: #dfd2fa;
     --top-act-user-shadow-color: rgba(0, 0, 0, 0.08);
 
+    // Act dropdown
+    --act-dropdown-inner-bg-color: #323743;
+    --act-dropdown-inner-shadow-color: rgba(23, 28, 40, 0.4);
+
     // Dropdown Menu
     --dropdown-inner-bg-color: #323743;
     --dropdown-inner-shadow-color: rgba(23, 28, 40, 0.4);
     --dropdown-arrow-bg-color: brightness(0) saturate(100%) invert(18%) sepia(4%) saturate(2366%) hue-rotate(185deg) brightness(100%) contrast(91%);
+    --act-dropdown-border: #171c28;
 
     // Navbar Menu
     --navbar-menu-bg-color: #292e39;
