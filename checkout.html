@@ -125,7 +125,7 @@
                                                     </button>
                                                     <button class="checkout-item__btn checkout-item__btn--act">
                                                         <img src="./assets/icons/delete.svg" alt="" class="checkout-item__btn-icon" />
-                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large">Delete</span>
+                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large js-toggle" toggle-target="#delete-modal">Delete</span>
                                                     </button>
                                                 </div>
                                             </div>
@@ -177,7 +177,7 @@
                                                     </button>
                                                     <button class="checkout-item__btn checkout-item__btn--act">
                                                         <img src="./assets/icons/delete.svg" alt="" class="checkout-item__btn-icon" />
-                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large">Delete</span>
+                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large js-toggle" toggle-target="#delete-modal">Delete</span>
                                                     </button>
                                                 </div>
                                             </div>
@@ -229,7 +229,7 @@
                                                     </button>
                                                     <button class="checkout-item__btn checkout-item__btn--act">
                                                         <img src="./assets/icons/delete.svg" alt="" class="checkout-item__btn-icon" />
-                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large">Delete</span>
+                                                        <span class="checkout-item__btn-value checkout-item__btn-value--large js-toggle" toggle-target="#delete-modal">Delete</span>
                                                     </button>
                                                 </div>
                                             </div>
@@ -317,5 +317,17 @@
         <script>
             load("#footer", "./template/footer.html");
         </script>
+
+        <!-- Modal -->
+        <div id="delete-modal" class="modal hide">
+            <div class="modal__content">
+                <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quisquam.</p>
+                <div class="modal__bottom">
+                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#delete-modal">Cancel</button>
+                    <button class="btn btn--primary modal__btn modal__btn--waning js-toggle" toggle-target="#delete-modal">Confirm</button>
+                </div>
+            </div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-modal"></div>
+        </div>
     </body>
 </html>
