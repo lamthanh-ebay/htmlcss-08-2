@@ -1,0 +1,173 @@
+@use "../abstracts";
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__message {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        margin-top: 16px;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &-link {
+            text-decoration: underline;
+            color: #0071dc;
+        }
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__btn {
+        gap: 10px;
+        height: 40px;
+        padding: 0 20px;
+
+        font-size: 1.6rem;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }
+}
+
+.user-address-card {
+    display: flex;
+    gap: 30px;
+
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__checkbox {
+        &-input {
+            // Loại bỏ style mặc định trình duyệt áp vào input
+            // Tức là ẩn checkbox đi.
+            appearance: none;
+
+            &::before {
+                content: url(../icons/check-box-uncheck.svg);
+            }
+
+            // Dark theme cần thêm filter ntn nhé.
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url(../icons/check-box-checked.svg);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+
+    &__desc {
+        width: min(570px, 95%);
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        margin-top: 20px;
+
+        @include abstracts.screen(md) {
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__item {
+        margin-left: 8px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+        list-style: disc;
+        list-style-position: inside;
+    }
+
+    &__ctrl {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.444%;
+    }
+}

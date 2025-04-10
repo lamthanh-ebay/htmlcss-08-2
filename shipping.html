@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout | Grocery Mart</title>
+        <title>Shipping | Grocery Mart</title>
 
         <!-- Font -->
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
@@ -53,8 +53,14 @@
                                 </a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="#!" class="breadcrumbs__link">
+                                <a href="./checkout.html" class="breadcrumbs__link">
                                     Checkout
+                                    <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+                                </a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#!" class="breadcrumbs__link">
+                                    Shipping
                                     <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
                                 </a>
                             </li>
@@ -67,6 +73,93 @@
                         <!-- Checkout left -->
                         <div class="col-8 col-lg-12">
                             <div class="checkout-info">
+                                <h1 class="checkout-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                <div class="checkout-separate"></div>
+
+                                <!-- User address -->
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div class="user-address__top-left">
+                                            <h2 class="user-address__heading">Shipping address</h2>
+                                            <p class="user-address__desc">Where should we deliver your order?</p>
+                                        </div>
+                                        <div class="user-address__top-right">
+                                            <button class="btn btn--primary btn--round user-address__btn">
+                                                <img src="./assets/icons/plus.svg" alt="" class="user-address__btn-icon" />
+                                                Add a new address
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- User Address Message -->
+                                    <div class="user-address__message d-none">
+                                        <p class="user-address__message-empty">Not address yet.</p>
+                                        <a href="#!" class="user-address__message-link">Add a new Address</a>
+                                    </div>
+
+                                    <!-- User address item 1 -->
+                                    <article class="user-address-card">
+                                        <div class="user-address-card__left">
+                                            <!-- User address chose -->
+                                            <div class="user-address-card__chose">
+                                                <label class="user-address-card__checkbox">
+                                                    <input type="radio" name="user-address" id="" class="user-address-card__checkbox-input" checked />
+                                                </label>
+                                            </div>
+
+                                            <!-- User address info -->
+                                            <div class="user-address-card__info">
+                                                <p class="user-address-card__title">Imran Khan</p>
+                                                <p class="user-address-card__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                                <ul class="user-address-card__list">
+                                                    <li class="user-address-card__item">Shipping</li>
+                                                    <li class="user-address-card__item">Delivery from store</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="user-address-card__right">
+                                            <div class="user-address-card__ctrl">
+                                                <button class="user-address-card__btn">
+                                                    <img src="./assets/icons/edit.svg" alt="" class="user-address-card__btn-icon icon" />
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <!-- User address item 2 -->
+                                    <article class="user-address-card">
+                                        <div class="user-address-card__left">
+                                            <!-- User address chose -->
+                                            <div class="user-address-card__chose">
+                                                <label class="user-address-card__checkbox">
+                                                    <input type="radio" name="user-address" id="" class="user-address-card__checkbox-input" />
+                                                </label>
+                                            </div>
+
+                                            <!-- User address info -->
+                                            <div class="user-address-card__info">
+                                                <p class="user-address-card__title">Imran Khan</p>
+                                                <p class="user-address-card__desc">Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet, Sylhet, Bangladesh</p>
+                                                <ul class="user-address-card__list">
+                                                    <li class="user-address-card__item">Shipping</li>
+                                                    <li class="user-address-card__item">Delivery from store</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="user-address-card__right">
+                                            <div class="user-address-card__ctrl">
+                                                <button class="user-address-card__btn">
+                                                    <img src="./assets/icons/edit.svg" alt="" class="user-address-card__btn-icon icon" />
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="checkout-separate"></div>
+                                <h2 class="checkout-info__sub-heading">Items details</h2>
+                                <!-- Checkout list item -->
                                 <div class="checkout-list">
                                     <!-- Checkout item 1 -->
                                     <article class="checkout-item">
@@ -235,21 +328,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4 col-xxl-5">
-                                            <div class="checkout-row">
-                                                <span class="checkout-info__label">Subtotal:</span>
-                                                <span class="checkout-value">$191.65</span>
-                                            </div>
-                                            <div class="checkout-row">
-                                                <span class="checkout-info__label">Shipping:</span>
-                                                <span class="checkout-value">$10.00</span>
-                                            </div>
-                                            <div class="checkout-separate"></div>
-                                            <div class="checkout-row checkout-row--bold">
-                                                <span class="checkout-info__label">Total:</span>
-                                                <span class="checkout-value">$201.65</span>
-                                            </div>
-                                        </div>
+                                        <div class="col-4 col-xxl-5"></div>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +355,7 @@
                                     <span class="checkout-value">$201.65</span>
                                 </div>
                                 <div class="checkout-row">
-                                    <a href="./shipping.html" class="btn btn--primary btn--round checkout-info__btn">Continue to checkout</a>
+                                    <a href="#!" class="btn btn--primary btn--round checkout-info__btn">Continue to checkout</a>
                                 </div>
                             </div>
                             <div class="checkout-info">
